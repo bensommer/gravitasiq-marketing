@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for signing up for GravitasIQ. Your free trial is ready to start.">
+    <title>Welcome to GravitasIQ - Your Free Trial Awaits</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Analytics Placeholders -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        
+        // Track thank you page view
+        gtag('event', 'signup_complete', {
+            event_category: 'conversion',
+            event_label: 'thank_you_page',
+            value: 1
+        });
+    </script>
+    
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "LINKEDIN_PARTNER_ID";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+</head>
+<body>
+    <section class="thank-you-hero">
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="success-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40" cy="40" r="40" fill="#48BB78"/>
+                        <path d="M25 40L35 50L55 30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <h1>Welcome to GravitasIQ!</h1>
+                <p class="subtitle">Your free trial is ready to start. We've sent you an email with next steps.</p>
+                
+                <div class="next-steps">
+                    <h2>What happens next?</h2>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Check your email</h3>
+                                <p>We've sent login instructions to <span id="userEmail"></span></p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Upload your first meeting</h3>
+                                <p>Start with any recent meeting transcript to get your baseline scores</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Get your analysis</h3>
+                                <p>See your scores across 28 leadership dimensions in just minutes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trial-details">
+                    <h2>Your 14-day free trial includes:</h2>
+                    <ul class="trial-features">
+                        <li>Up to 5 meeting analyses</li>
+                        <li>Complete leadership dimension scoring</li>
+                        <li>Personalized coaching insights</li>
+                        <li>Progress tracking dashboard</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+                
+                <div class="cta-section">
+                    <a href="https://app.gravitasiq.com/login" class="cta-button large">Access Your Dashboard</a>
+                    <p class="help-text">Need help? <a href="mailto:support@gravitasiq.com">Contact our support team</a></p>
+                </div>
+                
+                <div class="social-proof-small">
+                    <p class="testimonial-short">"I got more actionable feedback in 10 minutes than 6 months of traditional coaching."</p>
+                    <cite>— Sarah Chen, VP of Strategy</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="resources">
+        <div class="container">
+            <h2>Get the most from your trial</h2>
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <div class="resource-icon">📋</div>
+                    <h3>Transcript Guide</h3>
+                    <p>Learn how to export transcripts from Zoom, Teams, and other platforms</p>
+                    <a href="#" class="resource-link">View Guide →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Best Practices</h3>
+                    <p>Tips for getting the most accurate and helpful analysis results</p>
+                    <a href="#" class="resource-link">Read Tips →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">💬</div>
+                    <h3>Success Stories</h3>
+                    <p>See how other executives have improved their leadership presence</p>
+                    <a href="#" class="resource-link">Read Stories →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GravitasIQ. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="mailto:support@gravitasiq.com">Support</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Display user email if available
+        document.addEventListener('DOMContentLoaded', function() {
+            const userData = localStorage.getItem('userData');
+            const userEmailSpan = document.getElementById('userEmail');
+            
+            if (userData && userEmailSpan) {
+                const data = JSON.parse(userData);
+                userEmailSpan.textContent = data.email;
+            }
+            
+            // Clear stored data after displaying
+            localStorage.removeItem('userData');
+            localStorage.removeItem('userEmail');
+        });
+    </script>
+</body>
+</html>

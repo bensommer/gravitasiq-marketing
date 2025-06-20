@@ -1,0 +1,91 @@
+# Claude Code Prompt: GravitasIQ Marketing Landing Page
+
+Generate a complete marketing landing page for GravitasIQ with the following specifications:
+
+## Product Context
+- **Product**: GravitasIQ - AI-powered meeting analytics platform
+- **Value Prop**: "95% cheaper than executive coaching, instant feedback"
+- **Target**: Individual professionals (VPs, Directors, C-Suite, Senior Managers)
+- **Pricing**: Professional ($89/month), Premium ($149/month)
+- **Free Trial**: 14-day trial, no credit card required
+
+## Page Requirements
+
+### HTML Structure
+- Modern, responsive HTML5 landing page
+- Mobile-first design optimized for conversions
+- Fast loading with minimal dependencies
+- SEO optimized with proper meta tags
+
+### Key Sections (in order):
+1. **Hero Section**
+   - Headline: "Score Your Executive Presence in Minutes"
+   - Subheading: "AI-powered meeting analysis that shows exactly how you come across to others"
+   - Primary CTA: "Start Free Trial" 
+   - Hero image placeholder or simple graphic
+
+2. **Problem Statement**
+   - "75% of executives overestimate their meeting impact"
+   - Brief pain points: subjective feedback, expensive coaching, unclear improvement path
+
+3. **Solution Overview**
+   - 3 key benefits as bullet points:
+     - "Get objective scores across 28 leadership dimensions"
+     - "See specific examples from your actual meetings"  
+     - "Track improvement over time with data"
+
+4. **How It Works (3 steps)**
+   - Upload meeting transcript
+   - Get AI analysis in minutes
+   - Receive personalized coaching insights
+
+5. **Social Proof**
+   - "Join 500+ executives improving their presence"
+   - Placeholder testimonial quotes
+   - Company logos placeholder
+
+6. **Pricing Section**
+   - Professional ($89/month) vs Premium ($149/month)
+   - Feature comparison table
+   - 14-day free trial emphasis
+
+7. **FAQ Section**
+   - 5-6 common questions about security, accuracy, file formats
+
+8. **Final CTA**
+   - "Transform Your Executive Presence Today"
+   - Trial signup form
+
+### Technical Specs
+- **Framework**: Vanilla HTML/CSS/JS (no heavy frameworks)
+- **Styling**: Modern CSS with flexbox/grid, clean typography
+- **Colors**: Professional blue/gray palette
+- **Forms**: Functional signup forms with validation
+- **Analytics Ready**: Include Google Analytics and LinkedIn Insight Tag placeholders
+- **Conversion Tracking**: Add conversion event tracking code
+
+### Form Requirements
+- Email capture form in hero
+- Full signup form at bottom with: Name, Email, Company, Role
+- Form validation and submission handling
+- Thank you page redirect
+
+### Performance Optimizations
+- Minified CSS
+- Optimized images (WebP format)
+- Lazy loading for below-fold content
+- Fast loading score target: 90+ on PageSpeed
+
+## Files to Generate
+1. `index.html` - Main landing page
+2. `styles.css` - All styling
+3. `script.js` - Form handling and interactions
+4. `thank-you.html` - Post-signup thank you page
+
+## Deployment Notes
+- Ready for Railway deployment
+- Include environment variable placeholders for analytics IDs
+- Mobile responsive (375px to 1920px)
+- Cross-browser compatible (Chrome, Safari, Firefox, Edge)
+
+Generate clean, professional code that converts visitors into trial users. Focus on clarity, trust, and removing friction from the signup process.
