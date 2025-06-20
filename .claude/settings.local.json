@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh auth:*)",
+      "Bash(railway status:*)",
+      "Bash(railway login:*)",
+      "Bash(npm install)",
+      "Bash(npm start)",
+      "Bash(git push:*)",
+      "Bash(railway --version)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:docs.railway.com)"
     ],
     "deny": []
   }
