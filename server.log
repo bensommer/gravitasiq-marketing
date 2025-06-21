@@ -1,0 +1,20 @@
+Starting server on port 3000
+Environment: development
+✅ Server successfully started on 0.0.0.0:3000
+✅ Health check available at: http://0.0.0.0:3000/health
+✅ Test endpoint available at: http://0.0.0.0:3000/test
+Health check requested
+Test endpoint requested
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico
+Serving index.html for route: /favicon.ico

@@ -13,7 +13,15 @@
       "Bash(git push:*)",
       "Bash(railway --version)",
       "Bash(pkill:*)",
-      "WebFetch(domain:docs.railway.com)"
+      "WebFetch(domain:docs.railway.com)",
+      "Bash(PORT=3000 node server.js)",
+      "Bash(curl:*)",
+      "Bash(ss:*)",
+      "Bash(pgrep:*)",
+      "Bash(node:*)",
+      "Bash(kill:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }
