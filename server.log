@@ -18,3 +18,5 @@ Serving index.html for route: /favicon.ico
 Serving index.html for route: /favicon.ico
 Serving index.html for route: /favicon.ico
 Serving index.html for route: /favicon.ico
+Received SIGTERM, shutting down gracefully
+Server closed
