@@ -4,7 +4,7 @@
   "description": "GravitasIQ marketing landing page",
   "main": "server.js",
   "scripts": {
-    "start": "node debug-server.js",
+    "start": "node server.js",
     "prod": "node server.js",
     "dev": "node server.js",
     "simple": "node simple-server.js",
