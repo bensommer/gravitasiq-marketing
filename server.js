@@ -1,10 +1,17 @@
+console.log('=== RAILWAY EXPRESS SERVER ===');
+console.log('Node version:', process.version);
+console.log('Environment variables:');
+console.log('- PORT:', process.env.PORT);
+console.log('- NODE_ENV:', process.env.NODE_ENV);
+console.log('- RAILWAY_ENVIRONMENT:', process.env.RAILWAY_ENVIRONMENT);
+
 const express = require('express');
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-console.log(`Starting server on port ${PORT}`);
+console.log(`Starting Express server on port ${PORT}`);
 console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 
 // Health check endpoint
