@@ -4,8 +4,6 @@ builder = "nixpacks"
 [deploy]
 startCommand = "npm start"
 restartPolicyType = "always"
-healthcheckPath = "/health"
-healthcheckTimeout = 300
 
 [variables]
 NODE_ENV = "production"
