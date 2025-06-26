@@ -31,17 +31,16 @@ app.get('/test', (req, res) => {
   res.status(200).send('Server is working!');
 });
 
-// Serve static files with explicit options
-app.use(express.static(path.join(__dirname), {
-  index: 'index.html',
-  setHeaders: (res, path) => {
-    if (path.endsWith('.html')) {
-      res.setHeader('Content-Type', 'text/html');
-    }
-  }
-}));
+// Serve static files
+app.use(express.static(__dirname));
 
-// Handle SPA routing - serve index.html for all routes
+// Root route
+app.get('/', (req, res) => {
+  console.log('Root route requested');
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Handle SPA routing - serve index.html for all other routes
 app.get('*', (req, res) => {
   console.log(`Serving index.html for route: ${req.path}`);
   res.sendFile(path.join(__dirname, 'index.html'));
