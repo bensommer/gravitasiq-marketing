@@ -53,10 +53,11 @@ app.use((err, req, res, next) => {
   res.status(500).send('Internal Server Error');
 });
 
-const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Server successfully started on 0.0.0.0:${PORT}`);
-  console.log(`✅ Health check available at: http://0.0.0.0:${PORT}/health`);
-  console.log(`✅ Test endpoint available at: http://0.0.0.0:${PORT}/test`);
+const server = app.listen(PORT, () => {
+  console.log(`✅ Server successfully started on port ${PORT}`);
+  console.log(`✅ Health check available at: /health`);
+  console.log(`✅ Test endpoint available at: /test`);
+  console.log(`✅ Static files served from: ${__dirname}`);
 });
 
 server.on('error', (err) => {
