@@ -24,7 +24,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #ffffff;
+    background-color: #042042;
     padding: 1rem 0;
     border-bottom: 1px solid #e2e8f0;
     position: sticky;
@@ -38,9 +38,9 @@ body {
 }
 
 .logo-image {
-    width: 100%;
-    height: auto;
-    max-width: none;
+    height: 80px;
+    width: auto;
+    max-width: 250px;
 }
 
 /* Typography */
