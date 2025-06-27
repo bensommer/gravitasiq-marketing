@@ -38,9 +38,9 @@ body {
 }
 
 .logo-image {
-    height: 120px;
-    width: auto;
-    max-width: 300px;
+    width: 100%;
+    height: auto;
+    max-width: none;
 }
 
 /* Typography */
