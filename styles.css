@@ -537,6 +537,15 @@ p {
     color: #718096;
     margin-bottom: 0.8rem;
     line-height: 1.6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.references-list p:target {
+    background-color: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding-left: 16px;
 }
 
 /* Footer */
@@ -734,6 +743,20 @@ footer {
     height: 4px;
     background: linear-gradient(90deg, #dc2626, #f97316);
     border-radius: 2px;
+}
+
+.ref-link {
+    color: #dc2626;
+    text-decoration: none;
+    font-size: 0.6em;
+    vertical-align: super;
+    margin-left: 4px;
+    transition: color 0.3s ease;
+}
+
+.ref-link:hover {
+    color: #f97316;
+    text-decoration: underline;
 }
 
 .crisis-stat p {
