@@ -1,6 +1,6 @@
 # **Stop Guessing About Your Meeting Impact**
 
-## **67% of meetings fail. 71% are unproductive. Yours don't have to be.**
+## **67% of meetings fail¹. 71% are unproductive². Yours don't have to be.**
 
 AI-powered meeting analysis that shows exactly how you come across to others — with the data to prove it.
 
@@ -10,11 +10,11 @@ AI-powered meeting analysis that shows exactly how you come across to others —
 
 ## **The Meeting Effectiveness Crisis**
 
-**$399 billion** — that's what ineffective meetings cost U.S. companies annually. Meanwhile:
+**$399 billion³** — that's what ineffective meetings cost U.S. companies annually. Meanwhile:
 
-- **71% of managers** consider meetings unproductive  
-- **70% of meetings** keep employees from productive work
-- **45% of executives** say meetings serve no purpose
+- **71% of managers²** consider meetings unproductive  
+- **70% of meetings⁴** keep employees from productive work
+- **45% of executives⁵** say meetings serve no purpose
 
 **But here's the problem**: Everyone thinks it's *other people's* meetings that are the issue.
 
@@ -109,3 +109,13 @@ Most analyses are completed within 5-10 minutes of upload. You can track progres
 ---
 
 *Transform meetings from time-wasters into competitive advantages.*
+
+---
+
+## **References**
+
+¹ TeamStage, "Meeting Statistics 2024: Effectiveness, Virtual Conferencing" (2024)  
+² Harvard Business Review survey of 182 senior managers, cited in Notta.ai "100+ Eye-opening Meeting Statistics" (2025)  
+³ Inc.com, "A New Study of 19 Million Meetings Reveals That Meetings Waste More Time Than Ever" (2021)  
+⁴ Harvard Business Review, "Dear Manager, You're Holding Too Many Meetings" (2022)  
+⁵ TeamStage, "Meeting Statistics 2024: Effectiveness, Virtual Conferencing" (2024)
