@@ -586,6 +586,28 @@ footer {
     .problem-points {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .big-number {
+        font-size: 3.5rem;
+    }
+    
+    .crisis-points {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feedback-comparison {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .comparison-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .target-points {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
@@ -598,6 +620,22 @@ footer {
     }
     
     .problem-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .big-number {
+        font-size: 2.5rem;
+    }
+    
+    .crisis-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-card .price {
+        font-size: 2.5rem;
+    }
+    
+    .target-points {
         grid-template-columns: 1fr;
     }
     
@@ -626,6 +664,460 @@ footer {
     }
 }
 
+/* Meeting Crisis Section */
+.meeting-crisis {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fef2e9 0%, #fbe8d8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.meeting-crisis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23f97316" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.crisis-stat {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.big-number {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #dc2626;
+    text-shadow: 2px 2px 4px rgba(220, 38, 38, 0.1);
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+}
+
+.big-number::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #dc2626, #f97316);
+    border-radius: 2px;
+}
+
+.crisis-stat p {
+    font-size: 1.3rem;
+    color: #7c2d12;
+    font-weight: 600;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.crisis-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.crisis-point {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+    border-top: 4px solid #dc2626;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.crisis-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(249, 115, 22, 0.05) 100%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.crisis-point:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(220, 38, 38, 0.2);
+}
+
+.crisis-point:hover::before {
+    opacity: 1;
+}
+
+.crisis-point .stat {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+    display: block;
+    position: relative;
+}
+
+.crisis-point p {
+    font-size: 1.1rem;
+    color: #7c2d12;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+}
+
+.crisis-insight {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 6px solid #f97316;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.crisis-insight p {
+    font-size: 1.2rem;
+    color: #7c2d12;
+    margin: 0;
+    text-align: center;
+}
+
+/* What If Section */
+.what-if {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    position: relative;
+}
+
+.what-if::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%230ea5e9" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    pointer-events: none;
+}
+
+.feedback-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 3rem;
+}
+
+.feedback-bad,
+.feedback-good {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.feedback-bad {
+    border-top: 6px solid #dc2626;
+}
+
+.feedback-bad::before {
+    content: '✗';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #dc2626;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.feedback-good {
+    border-top: 6px solid #16a34a;
+}
+
+.feedback-good::before {
+    content: '✓';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #16a34a;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.feedback-bad:hover,
+.feedback-good:hover {
+    transform: translateY(-5px);
+}
+
+.feedback-bad h3 {
+    color: #dc2626;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.feedback-good h3 {
+    color: #16a34a;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.feedback-bad ul,
+.feedback-good ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feedback-bad li,
+.feedback-good li {
+    padding: 12px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding-left: 40px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-bad li {
+    background: linear-gradient(90deg, rgba(220, 38, 38, 0.05), rgba(220, 38, 38, 0.02));
+    color: #7f1d1d;
+}
+
+.feedback-good li {
+    background: linear-gradient(90deg, rgba(22, 163, 74, 0.05), rgba(22, 163, 74, 0.02));
+    color: #14532d;
+}
+
+.feedback-bad li:hover {
+    background: linear-gradient(90deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.05));
+}
+
+.feedback-good li:hover {
+    background: linear-gradient(90deg, rgba(22, 163, 74, 0.1), rgba(22, 163, 74, 0.05));
+}
+
+/* Cost Comparison Section */
+.cost-comparison {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+    position: relative;
+}
+
+.cost-comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="money" width="50" height="50" patternUnits="userSpaceOnUse"><text x="25" y="25" text-anchor="middle" dominant-baseline="middle" font-size="20" fill="%23f59e0b" opacity="0.05">$</text></pattern></defs><rect width="100" height="100" fill="url(%23money)"/></svg>');
+    pointer-events: none;
+}
+
+.comparison-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.comparison-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.comparison-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05));
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.comparison-card:hover {
+    transform: translateY(-10px);
+}
+
+.comparison-card:hover::before {
+    opacity: 1;
+}
+
+.comparison-card.traditional {
+    box-shadow: 0 12px 48px rgba(220, 38, 38, 0.15);
+    border-top: 6px solid #dc2626;
+}
+
+.comparison-card.traditional:hover {
+    box-shadow: 0 20px 64px rgba(220, 38, 38, 0.25);
+}
+
+.comparison-card.gravitasiq {
+    box-shadow: 0 12px 48px rgba(22, 163, 74, 0.15);
+    border-top: 6px solid #16a34a;
+}
+
+.comparison-card.gravitasiq:hover {
+    box-shadow: 0 20px 64px rgba(22, 163, 74, 0.25);
+}
+
+.comparison-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.comparison-card .price {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+}
+
+.comparison-card.traditional .price {
+    color: #dc2626;
+}
+
+.comparison-card.gravitasiq .price {
+    color: #16a34a;
+}
+
+.comparison-card p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+}
+
+.comparison-conclusion {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 6px solid #f59e0b;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.comparison-conclusion {
+    font-size: 1.2rem;
+    color: #92400e;
+    margin: 0;
+}
+
+/* Perfect For Section */
+.perfect-for {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+    position: relative;
+}
+
+.perfect-for::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" width="25" height="25" patternUnits="userSpaceOnUse"><polygon points="12.5,2 15.5,9 23,9 17.25,13.5 19.5,21 12.5,16.5 5.5,21 7.75,13.5 2,9 9.5,9" fill="%238b5cf6" opacity="0.08"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+    pointer-events: none;
+}
+
+.target-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.target-point {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+    border-top: 4px solid #8b5cf6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.target-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.target-point:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(139, 92, 246, 0.2);
+}
+
+.target-point:hover::before {
+    opacity: 1;
+}
+
+.target-point h3 {
+    font-size: 1.3rem;
+    color: #6b21a8;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.target-point p {
+    font-size: 1rem;
+    color: #7c3aed;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+}
+
 /* Performance Optimizations */
 .hero-image,
 .benefit,
@@ -639,9 +1131,49 @@ footer {
 .social-proof,
 .pricing,
 .faq,
-.final-cta {
+.final-cta,
+.meeting-crisis,
+.what-if,
+.cost-comparison,
+.perfect-for {
     opacity: 0;
     animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animation delays for new sections */
+.meeting-crisis {
+    animation-delay: 0.1s;
+}
+
+.what-if {
+    animation-delay: 0.2s;
+}
+
+.cost-comparison {
+    animation-delay: 0.3s;
+}
+
+.perfect-for {
+    animation-delay: 0.4s;
+}
+
+/* Number counting animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.big-number,
+.crisis-point .stat,
+.comparison-card .price {
+    animation: countUp 0.8s ease forwards;
+    animation-delay: 0.5s;
 }
 
 @keyframes fadeInUp {
